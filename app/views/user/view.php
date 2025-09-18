@@ -7,28 +7,28 @@
     <style>
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            background: linear-gradient(135deg, #000000, #0f2027, #203a43, #2c5364);
             margin: 0;
             padding: 20px;
-            color: #444;
+            color: #e0f7ff;
         }
 
         h1 {
             text-align: center;
             margin-bottom: 30px;
-            text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.5);
-            color: #b83280;
+            text-shadow: 0px 0px 8px rgba(0,191,255,0.8);
+            color: #00bfff;
         }
 
         table {
             width: 80%;
             margin: 0 auto;
             border-collapse: collapse;
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 20px rgba(0,191,255,0.6);
             border-radius: 15px;
             overflow: hidden;
-            background: #fff;
-            color: #555;
+            background: #0d1117;
+            color: #e0f7ff;
         }
 
         th, td {
@@ -37,9 +37,10 @@
         }
 
         th {
-            background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+            background: linear-gradient(135deg, #00bfff, #1e90ff);
             color: white;
             font-size: 18px;
+            text-shadow: 0 0 6px rgba(0,0,0,0.4);
         }
 
         tr {
@@ -47,17 +48,17 @@
         }
 
         tr:nth-child(even) {
-            background: #ffe6f2;
+            background: #111827;
         }
 
         tr:nth-child(odd) {
-            background: #fff0f5;
+            background: #0d1117;
         }
 
         tr:hover {
             transform: scale(1.02);
-            box-shadow: 0px 5px 15px rgba(255,105,180,0.4);
-            background: #ffd6e8;
+            box-shadow: 0px 0px 15px rgba(0,191,255,0.6);
+            background: #112233;
         }
 
         a {
@@ -69,49 +70,59 @@
         }
 
         a[href*="update"] {
-            background: #ff80bf;
+            background: #00bfff;
             color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(0,191,255,0.6);
         }
 
         a[href*="update"]:hover {
-            background: #e75480;
+            background: #1e90ff;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(255,105,180,0.5);
+            box-shadow: 0 0 15px rgba(0,191,255,1);
         }
 
         a[href*="delete"] {
             background: #ff4d6d;
             color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 0 10px rgba(255,77,109,0.6);
         }
 
         a[href*="delete"]:hover {
             background: #d6336c;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(255,0,102,0.4);
+            box-shadow: 0 0 15px rgba(255,0,102,0.8);
         }
-    </style>
-</head>
-<body>
-    <h1>🌸 Welcome to User Page 🌸</h1>
-    
-    <div style="width: 80%; margin: 0 auto 30px auto; text-align: right;">
-        <a href="<?= site_url('user/create'); ?>" style="
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+
+        .create-btn {
+            background: linear-gradient(135deg, #00bfff, #1e90ff);
             color: white;
             padding: 12px 24px;
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
             font-size: 16px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 0 15px rgba(0,191,255,0.6);
             transition: all 0.3s ease;
             display: inline-block;
-        " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(255,105,180,0.5)'" 
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.2)'">
-            ✨ + Create New User ✨
-        </a>
+        }
+
+        .create-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0,191,255,1);
+        }
+
+        .btn-container {
+            width: 80%;
+            margin: 0 auto 30px auto;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to User Page</h1>
+    
+    <div class="btn-container">
+        <a href="<?= site_url('user/create'); ?>" class="create-btn">+ Create New User</a>
     </div>
     
     <table>
